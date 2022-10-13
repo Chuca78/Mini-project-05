@@ -31,9 +31,11 @@ textarea {
 }
 
 .row {
-  white-space: pre-wrap;
-  height: 80px;
+  /* white-space: pre-wrap; */
+  height: auto !important;
+  width: 90vw;
   border-top: 1px solid white;
+  border-top: 1px dashed #000000;
 }
 
 .hour {
@@ -63,9 +65,14 @@ textarea {
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
+  cursor: pointer;
+  padding: 20px
 }
 
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all 0.3s ease-in-out;
+.saveBtn:hover {
+  background-color: #77dd77;
+  color: black;
 }
+
+/* todo: add css for button click */
+
