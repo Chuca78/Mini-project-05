@@ -30,6 +30,7 @@
     <div class="container">
       <!-- Timeblocks go here -->
 <!-- todo: fix code so it isn't so long and repetitive -->
+<!-- todo: fix this code so that it is tied to the save button -->
     <div id="hour">
 
       <div class="row">
@@ -98,81 +99,81 @@
 
       <div class="row">
         <h3>13:00 pm</h3>
-        <textarea id='1' style="padding: 20px; line-height: 100%" class="textarea col-9 blockquote text-black" rows="1"></textarea>
+        <textarea id='13' style="padding: 20px; line-height: 100%" class="textarea col-9 blockquote text-black" rows="1"></textarea>
         <div class="col text-center">
           <button class="saveBtn"><i class="fas fa-save fa-3x trailing"></i></button>
         </div>
       </div>
       <script>
         $(document).ready(function(){
-        document.getElementById("1").value = localStorage.getItem("item5");
+        document.getElementById("13").value = localStorage.getItem("item5");
         });
        $(window).on('beforeunload', function() {
-        localStorage.setItem("item5",document.getElementById("1").value);
+        localStorage.setItem("item5",document.getElementById("13").value);
       });
       </script>
 
       <div class="row">
         <h3>14:00 pm</h3>
-        <textarea id='2' style="padding: 20px; line-height: 100%" class="textarea col-9 blockquote text-black" rows="1"></textarea>
+        <textarea id='14' style="padding: 20px; line-height: 100%" class="textarea col-9 blockquote text-black" rows="1"></textarea>
         <div class="col text-center">
           <button class="saveBtn"><i class="fas fa-save fa-3x trailing"></i></button>
         </div>
       </div>
       <script>
         $(document).ready(function(){
-        document.getElementById("2").value = localStorage.getItem("item6");
+        document.getElementById("14").value = localStorage.getItem("item6");
         });
        $(window).on('beforeunload', function() {
-        localStorage.setItem("item6",document.getElementById("2").value);
+        localStorage.setItem("item6",document.getElementById("14").value);
       });
       </script>
 
       <div class="row">
         <h3>15:00 pm</h3>
-        <textarea id='3' style="padding: 20px; line-height: 100%" class="textarea col-9 blockquote text-black" rows="1"></textarea>
+        <textarea id='15' style="padding: 20px; line-height: 100%" class="textarea col-9 blockquote text-black" rows="1"></textarea>
         <div class="col text-center">
           <button class="saveBtn"><i class="fas fa-save fa-3x trailing"></i></button>
         </div>
       </div>
       <script>
         $(document).ready(function(){
-        document.getElementById("3").value = localStorage.getItem("item7");
+        document.getElementById("15").value = localStorage.getItem("item7");
         });
        $(window).on('beforeunload', function() {
-        localStorage.setItem("item7",document.getElementById("3").value);
+        localStorage.setItem("item7",document.getElementById("15").value);
       });
       </script>
 
       <div class="row">
         <h3>16:00 pm</h3>
-        <textarea id='4' style="padding: 20px; line-height: 100%" class="textarea col-9 blockquote text-black" rows="1"></textarea>
+        <textarea id='16' style="padding: 20px; line-height: 100%" class="textarea col-9 blockquote text-black" rows="1"></textarea>
         <div class="col text-center">
           <button class="saveBtn"><i class="fas fa-save fa-3x trailing"></i></button>
         </div>
       </div>
       <script>
         $(document).ready(function(){
-        document.getElementById("4").value = localStorage.getItem("item8");
+        document.getElementById("16").value = localStorage.getItem("item8");
         });
        $(window).on('beforeunload', function() {
-        localStorage.setItem("item8",document.getElementById("4").value);
+        localStorage.setItem("item8",document.getElementById("16").value);
       });
       </script>
 
       <div class="row">
         <h3>17:00 pm</h3>
-        <textarea id='5' style="padding: 20px; line-height: 100%" class="textarea col-9 blockquote text-black" rows="1"></textarea>
+        <textarea id='17' style="padding: 20px; line-height: 100%" class="textarea col-9 blockquote text-black" rows="1"></textarea>
         <div class="col text-center">
           <button class="saveBtn"><i class="fas fa-save fa-3x trailing"></i></button>
         </div>
       </div>
       <script>
         $(document).ready(function(){
-        document.getElementById("5").value = localStorage.getItem("item9");
+        document.getElementById("17").value = localStorage.getItem("item9");
         });
        $(window).on('beforeunload', function() {
-        localStorage.setItem("item9",document.getElementById("5").value);
+        localStorage.setItem("item9",document.getElementById("17").value);
       });
       </script>
 
