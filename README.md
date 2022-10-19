@@ -2,30 +2,16 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+This is the mini project 05 for the UT Austin coding boot camp. I was given the index.html and style.css but no script.js for a website that only showed the header. This type of project is called an "on the job ticket" where I was given existing code and the challenge was to write js to make the website work. The challenge for this project was to create a daily schedule that accepts text input form the user. The first thing I did was create a jquery script to display the current date in the header/ Next I created the text block which houses the time blocks, text areas, and save button. I also tied a function to compare the present hour to schedule hour that displays different colors for past, present, and future times. Lastly, the save buttons are tied to local storage to save the text input form the user.
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+This website is designed to show my proficiency in "on the job tickets" and my ability to write jquery code while satisfying the user story and acceptance criteria. This website can be used to store schedule items for the current day, based on user input.The external URL for this daily schedule is:
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+N/A
 
 ## License
 
