@@ -7,6 +7,10 @@ This is the mini project 05 for the UT Austin coding boot camp. I was given the 
 ## Usage
 
 This website is designed to show my proficiency in "on the job tickets" and my ability to write jquery code while satisfying the user story and acceptance criteria. This website can be used to store schedule items for the current day, based on user input.The external URL for this daily schedule is:
+https://chuca78.github.io/Work-Day-Scheduler/
+![chuca78 github io_Work-Day-Scheduler_](https://user-images.githubusercontent.com/97859682/196571406-2a2093ab-cf7d-474d-8f3b-b5d4cb059042.png)
+
+
 
 
 ## Credits
