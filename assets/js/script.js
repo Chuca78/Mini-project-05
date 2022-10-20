@@ -56,7 +56,6 @@ function presentHour() {
 presentHour();
 
 $(".saveBtn").on("click", function() {
-    alert('saved');
     var textValue = $(this).siblings(".textarea").val();
     textValue.value = $(this).parent().attr(".textarea")
     localStorage.setItem("comment", textValue);
