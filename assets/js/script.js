@@ -1,4 +1,16 @@
 
+
+// todo: fix me
+// var plan = $(this).siblings("#text").val();
+// textValue.value = $(this).parent().attr(".textarea")
+
+var comment = localStorage.getItem("comment");
+console.log(comment);
+
+
+
+
+
 // displays current day and date in the header
 var today = moment();
 $("#currentDay").text(today.format("dddd, MMM Do, YYYY"));
@@ -55,8 +67,9 @@ function presentHour() {
 }
 presentHour();
 
+// todo: does not work properly
 $(".saveBtn").on("click", function() {
     var textValue = $(this).siblings(".textarea").val();
-    textValue.value = $(this).parent().attr(".textarea")
+    // textValue.value = $(this).parent().attr(".textarea")
     localStorage.setItem("comment", textValue);
 })
