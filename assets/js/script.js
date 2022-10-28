@@ -1,56 +1,48 @@
-
-
-// todo: fix me
-// var plan = $(this).siblings("#text").val();
-// textValue.value = $(this).parent().attr(".textarea")
-
-var comment = localStorage.getItem("comment");
-console.log(comment);
-
-
-
-
-
 // displays current day and date in the header
 var today = moment();
 $("#currentDay").text(today.format("dddd, MMM Do, YYYY"));
 
-// create the textBlock variable
-var textBlock = $('.row');
-// for loop used to create time, text, and buttons
-for (let i = 9; i <= 17; i ++) {
+// sets variables to use in time block creation
+var containerEl = $('.container');
+var successEl = $('.success-message');
 
-// create time blocks
-    var timeBlock = $('<p>');
-     // Assign style
-    timeBlock.addClass('hour');
-    // Display the time
-    timeBlock.text([i] + ":00");
-     // Attach the time element
-    textBlock.append(timeBlock);
+// function to create time, text, and save blocks
+for (var i = 9; i <= 17; i++) {
+    var row = $('<div>');
+    row.addClass('row time-block');
+    var hourEl = $('<p>');
+    hourEl.addClass('hour col-md-1');
+    hourEl.attr("id", "hour" + i);
 
-// create text blocks
-    var textInput = $('<textarea>');
-    // Assign style 
-    textInput.addClass('textarea style="padding: 20px; line-height: 100%" class="textarea col-9 blockquote text-black" rows="1" onsubmit="false' );
-    // Assign the text area to the id attribute
-    textInput.attr('id', [i] );
-    // Attach the text element
-    textBlock.append(textInput);
+    // display the times in every block
+    hourEl.text([i] + ":00")
 
-// create save buttons
-    // Create button
-    var saveBtn = $('<button>');
-    // Assign style to the button
-    saveBtn.addClass('saveBtn fas fa-save fa-2x trailing');
-    // Attach the button element
-    textBlock.append(saveBtn);
-}
+    // set up text area
+    var eventEl = $('<textarea>');
+    eventEl.addClass('description col-md-10');
+    eventEl.attr("id", i);
+
+    // set up save buttons
+    var saveButton = $('<button>');
+    saveButton.addClass('saveBtn');
+    // creates save button icon
+    var icon = $('<i>');
+    icon.addClass('fas fa-save fa-2x trailing');
+    saveButton.attr("id", "button" + i);
+    // adds icon to save button
+    saveButton.append(icon);
+
+    // appends everything into the row div
+    row.append(hourEl, eventEl, saveButton);
+    // appends the row elements into the container div
+    containerEl.append(row);
+    // saves the text in each block as the save button is clicked
+    saveButton.on('click', saveEvent);
+};
 
 // function to find present hour
 function presentHour() {
     var hour = moment().hour();
-
     var areaTags = $("textarea");
     // conditional to compare present hour to current hour for text areas for color changes
     for (var i = 0; i < areaTags.length; i++) {
@@ -65,11 +57,26 @@ function presentHour() {
         }
     }   
 }
-presentHour();
 
-// todo: does not work properly
-$(".saveBtn").on("click", function() {
-    var textValue = $(this).siblings(".textarea").val();
-    // textValue.value = $(this).parent().attr(".textarea")
-    localStorage.setItem("comment", textValue);
-})
+function saveEvent() {
+    var keyToSave = $(this).siblings('textarea').attr('id');
+    var valueToSave = $(this).siblings('textarea').val();
+    localStorage.setItem(keyToSave, valueToSave);
+    var message = $('#successMessage');
+    if (message.length === 0) {
+        var displayEl = $('<p id=successMessage>');
+        successEl.append(displayEl);
+    };
+
+};
+
+function renderEvent() {
+    $('textarea').each(function () {
+        var keyToDisplay = $(this).attr('id');
+        var valueToDisplay = localStorage.getItem(keyToDisplay);
+        $(this).text(valueToDisplay);
+    });
+};
+
+presentHour();
+renderEvent();
