@@ -10,9 +10,6 @@ This website is designed to show my proficiency in "on the job tickets" and my a
 https://chuca78.github.io/Work-Day-Scheduler/
 ![chuca78 github io_Work-Day-Scheduler_](https://user-images.githubusercontent.com/97859682/196571406-2a2093ab-cf7d-474d-8f3b-b5d4cb059042.png)
 
-
-
-
 ## Credits
 
 N/A
